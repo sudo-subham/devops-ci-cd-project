@@ -1,44 +1,59 @@
-📦 DevOps CI/CD Project
-This project demonstrates a complete CI/CD pipeline using Jenkins, Docker, and AWS EC2 for deploying a basic HTML web application.
+# 📦 DevOps CI/CD Project
 
-🔧 Tech Stack & Tools Used
-Git + GitHub – Version control
+This project demonstrates a complete CI/CD pipeline using **Jenkins**, **Docker**, and **AWS EC2** for deploying a basic static HTML web application.
 
-Jenkins – Continuous Integration & Delivery
+---
 
-Docker – Containerization of the app
+## 🔧 Tech Stack & Tools Used
 
-Docker Hub – Hosting container images
+| Tool            | Purpose                                |
+|------------------|----------------------------------------|
+| Git + GitHub     | Version control and source code hosting |
+| Jenkins          | Continuous Integration & Deployment    |
+| Docker           | Containerization of the application    |
+| Docker Hub       | Hosting Docker images                  |
+| AWS EC2          | Running the Dockerized application     |
+| AWS IAM          | Secure access control for services     |
+| CloudWatch       | Monitoring logs & basic metrics        |
 
-AWS EC2 – Hosting and running the Dockerized app
+---
 
-AWS IAM – Secure access control
+## 📁 Project Structure
 
-CloudWatch – Basic monitoring and logs
+devops-ci-cd-project/
+├── index.html # Simple HTML homepage
+├── style.css # Basic CSS styling
+└── Dockerfile # Nginx-based Docker image config
 
-📁 Project Structure
-bash
-Copy
-Edit
-├── index.html        # Simple HTML homepage
-├── style.css         # Basic styling
-└── Dockerfile        
-🚀 Pipeline Flow
-Developer pushes code to GitHub
+---
 
-Jenkins pulls the latest code
+## 🚀 CI/CD Pipeline Flow
 
-Builds Docker image using Dockerfile
+1. Developer pushes code to GitHub
+2. Jenkins (CI) is triggered on push
+3. Jenkins builds Docker image using `Dockerfile`
+4. Jenkins tags and pushes the image to Docker Hub
+5. Jenkins (CD) pulls the image from Docker Hub
+6. Jenkins deploys the container on AWS EC2 (port 80)
+7. AWS CloudWatch monitors logs & container metrics
 
-Pushes image to Docker Hub
+---
 
-Deploys container to AWS EC2 instance
+## ✅ Project Goal
 
-CloudWatch monitors logs & metrics
+> **Automate the deployment of a static web application** using modern DevOps practices, making it faster, scalable, and production-ready.
 
-✅ Goal
-Automate the deployment process of a static web app to make it faster, reliable, and scalable using DevOps practices.
+---
 
-👨‍💻 Author
-Shubham Pathak – DevOps Trainee (Cloud Counselage Internship)
+## 🌐 Live Demo
+
+App hosted at:
+http://51.21.170.143
+
+## 👨‍💻 Author
+
+**Name:** Shubham Pathak  
+**Role:** DevOps Trainee  
+**Internship:** Cloud Counselage Global – Professional Internship  
+**GitHub:** [https://github.com/sudo-subham](https://github.com/sudo-subham)
 
